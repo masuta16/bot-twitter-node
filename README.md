@@ -2,33 +2,36 @@
 
 Esse bot retwita o ultimo tweet usando a hashtag  ["`#mediaarts`"][twitter-mediaarts] e tenta retwitar uma vez por hora.
 
-_Note: you must be comfortable using your computer's command line interface to use this bot. If you've never used it, there are tutorials for [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
 
-## Installation
+_Nota:Voce tem que estar preparado para usar a interface de linha de comando do seu computador para usar esse bot. Se voce nunca utilizou ela,tem alguns tutoriaiis para [macOS]
+(http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) e [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
 
-If you don't already have have them, please install [Node.js](http://nodejs.org/). This will install two programs: `node`, which runs JavaScript from the command line, and `npm`, which helps you install software that Node.js can run.
+## Instalação
+Instale o [Node.js](http://nodejs.org/). 
 
-Make an empty project directory somewhere convenient for you, [download the archive zip file](https://github.com/masuta16/examplebot/archive/master.zip), and unzip the contents to your project directory. Go to your project directory in the command line. There should be four files there: `.gitignore`, `README.md`, `bot.js` and `config.js`. In that directory type:
+Crie um diretorio de projeto vazio conveniente para voce e [baixe o arquivo compactado em zip](https://github.com/masuta16/examplebot/archive/master.zip), 
+depois descompacteos conteudos para o diretorio do seu projeto. Vá para o diretorio do seu projeto na linha d ecomando devem haver 4 arquivos lá:  `.gitignore`, `README.md`, `bot.js` and `config.js`. 
+Então digite nesse diretorio:
 
 `npm install twit`
 
-This installs some code to the `npm_modules` subdirectory, which you don't need to worry about. (It's Twit, the library that lets us talk to Twitter.)
+Ele instala codigos para o subdiretorio `npm_modules`, entre elas o Twit que é a biblioteca que fala com o Twitter.
 
-## Connecting to Twitter
 
-At this point you need to register a Twitter account and also get its "app info".
+## Conectando ao Twitter
 
-So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I recommend you create a brand new email address (perhaps using Gmail) for the Twitter account. Once you register the account to that email address, wait for the confirmation email. Then go here and log in as the Twitter account for your bot:
+
+Nesse ponto voce precisa registrar uma conta no Twitter e tambem pegar a "app info".
+
+Então crie uma conta no Twitter para qualquer conta que voce quer twitar suas coisas. O  Twitter não permite que voce registre multiplas contas de twitter no mesmo endereço de email. Então eu te recomendo a criar um novo endereço de email para a conta do Twitter. Quando voce refistrar a conta para esse endereço de email, aguarde pelo email de confirmação. Então loge na sua conta do twitter para seu bot nesse link:
 
 https://apps.twitter.com/app/new
 
-Once you're there, fill in the required fields: name, description, website. None of it really matters at all to your actual app, it's just for Twitter's information. Do the captcha and submit.
+Uma vez nesse  site, complete nos campos requeridos com: name, description,website. Nada disso realmente importa no seu atual aplicativo é só para a informação no Twitter. Preencha o captcha e faça a submissão. 
+Depois voce vai ver uma tela com uma aba chamada "Details". Clique na opção "Settings" e sobre "Application Type" escolha "Read and Write" então clique no botão de atualizar no topo.
+Vá para a aba de Tokens e acesso e no botão clique em "create my acess token". Nada vai acontecer de imediato. Então aguarde um minuto e recarregue a pagina. Deve aparecer o "acess token" e "acces toke secret" que são textos com letras e numeros.
 
-Next you'll see a screen with a "Details" tab. Click on the "Settings" tab and under "Application Type" choose "Read and Write", then hit the update button at the bottom.
-
-Then go to the Keys and Access Tokens tab, and at the bottom click "create my access token". Nothing might happen immediately. Wait a minute and reload the page. then there should be "access token" and "access token secret", which are both long strings of letters and numbers.
-
-Now use a text editor to open up the "config.js" file. It should look like this:
+Use um editor de texto para abrir o arquivo "config.js". Ele deve ter uma aparência como essa:
 
 ```javascript
 module.exports = {
@@ -38,13 +41,11 @@ module.exports = {
   access_token_secret:  'blah'
 }
 ```
-
-In between those quotes, instead of `'blah'`, paste the appropriate info from the Details page. This is essentially the login information for the app.
-
-Now type the following in the command line in your project directory:
+Ao inves de `'blah'` coloe as informações apropriadas da pagina "Details". Essa é a informação de login essencial para o seu app.
+Digite o seguinte comando na sua linha de comand dentro do diretorio do  seu projeto:
 
 `node bot.js`
 
-Hopefully at this point you see a message like "Success! Check your bot, it should have retweeted something." Check the Twitter account for your bot, and it should have retweeted a tweet with the #mediaarts hashtag.
+Felizmente nesse ponto voce verá uma mensagem como "Sucess! Check your bot, it should have retweeted something." Verifique a conta do Twiter para seu bot, e ele deve ter retwitado um tweet com a hashtag #mediaarts.
 
 [twitter-mediaarts]:https://twitter.com/hashtag/mediaarts
