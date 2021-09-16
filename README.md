@@ -1,6 +1,6 @@
 # ExampleBot
 
-This bot retweets the latest tweet using the ["`#mediaarts`"][twitter-mediaarts] hashtag. It attempts to retweet once per hour.
+Esse bot retwita o ultimo tweet usando a hashtag  ["`#mediaarts`"][twitter-mediaarts] e tenta retwitar uma vez por hora.
 
 _Note: you must be comfortable using your computer's command line interface to use this bot. If you've never used it, there are tutorials for [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
 
@@ -8,7 +8,7 @@ _Note: you must be comfortable using your computer's command line interface to u
 
 If you don't already have have them, please install [Node.js](http://nodejs.org/). This will install two programs: `node`, which runs JavaScript from the command line, and `npm`, which helps you install software that Node.js can run.
 
-Make an empty project directory somewhere convenient for you, [download the archive zip file](https://github.com/dariusk/examplebot/archive/master.zip), and unzip the contents to your project directory. Go to your project directory in the command line. There should be four files there: `.gitignore`, `README.md`, `bot.js` and `config.js`. In that directory type:
+Make an empty project directory somewhere convenient for you, [download the archive zip file](https://github.com/masuta16/examplebot/archive/master.zip), and unzip the contents to your project directory. Go to your project directory in the command line. There should be four files there: `.gitignore`, `README.md`, `bot.js` and `config.js`. In that directory type:
 
 `npm install twit`
 
